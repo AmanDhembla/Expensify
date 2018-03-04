@@ -11,7 +11,8 @@ export default class ExpenseForm extends React.Component {
         note: '',
         amount: '',
         createdAt: moment(),
-        focused: false
+        focused: false,
+        error:""
     };
     onDescriptionChange =(e)=>{
         const desc=e.target.value;
@@ -31,7 +32,7 @@ export default class ExpenseForm extends React.Component {
     }
     onAmountChange=(e)=>{
         const amount =e.target.value;
-    if(amount.match(/^\d*(\.\d{0,2})?$/)){
+    if(!amount || amount.match(/^\d{1,}(\.\d{0,2})?$/)){
             this.setState(()=>{
                 return {
                     amount: amount
@@ -40,16 +41,35 @@ export default class ExpenseForm extends React.Component {
          }
     }
     onDateChange=(createdAt)=>{
-        this.setState(()=>{
-            return {
-                createdAt: createdAt
-            }
-        })
+        if(createdAt){
+            this.setState(()=>{
+                return {
+                    createdAt: createdAt
+                }
+            })
+        }
+        
+    }
+    onSubmit=(e)=>{
+        e.preventDefault();
+        if(!this.state.description || !this.state.amount){
+            this.setState(()=>{
+                return {
+                    error: "Please provide description and amount "
+                }
+            })
+        }else{
+            this.setState(()=>{
+                return {
+                    error: ""
+                }
+            })
+        }
     }
     render(){
         return (
             <div>
-                <form>
+                <form onSubmit={this.onSubmit}>
                     <input type="text" placeholder="Description" 
                         autoFocus 
                         value={this.state.description} 
@@ -69,14 +89,14 @@ export default class ExpenseForm extends React.Component {
                         isOutsideRange={()=>false}
                     />
                     <textarea 
-                        placeholder="Add a note"
+                        placeholder="Add a note(Optional)"
                         value={this.state.note}
                         onChange={this.onNoteChange}
                     >
                     </textarea>
                     <button>Add Expense</button>
                 </form>
-                
+                {this.state.error && <p>{this.state.error}</p>}
             </div>
         );
     }
