@@ -20,12 +20,20 @@ store.subscribe(()=>{
 
 store.dispatch(add_Expense({
     description: "khana",
-    amount: 400
+    amount: 400,
+    createdAt: 2000
 }));
 
 store.dispatch(add_Expense({
     description: "peena",
-    amount: 100
+    amount: 100,
+    createdAt:1000
+}));
+
+store.dispatch(add_Expense({
+    description: "grocery",
+    amount: 250,
+    createdAt: 100
 }));
 
 store.dispatch(setTextFilter("na"));
