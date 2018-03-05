@@ -1,8 +1,7 @@
 export default (expenses,{text,sortBy,startDate,endDate})=>{
     return expenses.filter((expense)=>{
-        return (typeof startDate !== 'number' ||startDate<=expense.createdAt) 
-        && ( typeof endDate !== 'number' || endDate >=expense.createdAt ) 
-        && expense.description.toLowerCase().includes(text.toLowerCase())
+        console.log(expense);
+        return ( expense.description.toLowerCase().includes(text.toLowerCase()))
         }).sort((a,b)=>{
             if(sortBy=="date"){
                 return a.createdAt >b.createdAt ? 1: -1;

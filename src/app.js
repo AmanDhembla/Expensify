@@ -13,9 +13,10 @@ const store =configureStore();
 
 store.subscribe(()=>{
     const state=store.getState();
-    const expenses=state.expenses;
-    const filters=state.filters;
-    console.log(getVisibleExpenses(expenses,filters));
+    console.log(state);
+    // const expenses=state.expenses;
+    // const filters=state.filters;
+    // console.log(getVisibleExpenses(expenses,filters));
 });
 
 store.dispatch(add_Expense({

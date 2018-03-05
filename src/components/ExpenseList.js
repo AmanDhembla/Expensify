@@ -11,8 +11,9 @@ const  ExpenseList = (props) =>(
         })}
     </div>
 );
-
+ 
 export default connect((state)=>{
+    console.log(state);
     return {
         expenses: selectExpenses(state.expenses,state.filters)
     };

@@ -19,7 +19,12 @@ module.exports={
             ]
         }]
     },
-    devtool:'cheap-module/eval-source-map', // check other options from the documentation of webpack
+    resolve: {
+        alias: {
+          react: path.resolve('./node_modules/react'),
+        }
+    },
+    devtool:'cheap-module-source-map', // check other options from the documentation of webpack
     devServer:{
         contentBase: path.join(__dirname,'public'),
         historyApiFallback: true
