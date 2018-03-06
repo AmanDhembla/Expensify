@@ -1,0 +1,37 @@
+.expenseList{
+    width: 850px;
+    margin: auto;
+}
+
+.expenseListHeading{
+    text-align: center;
+}
+
+.expenseListHeader{
+    background-color: rgb(72, 170, 173);
+    color: whitesmoke;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.listitem{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid rgba(0, 158, 163, 0.3);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color:black;
+}
+
+// .listitem__heading{
+//     font-size:
+// }
+
+// .listitem__details{
+//     display: inline;
+// }
