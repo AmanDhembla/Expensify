@@ -37,8 +37,6 @@ store.dispatch(add_Expense({
     createdAt: 100
 }));
 
-store.dispatch(setTextFilter("na"));
-
 const jsx =(
     <Provider store={store}>
         <AppRouter />

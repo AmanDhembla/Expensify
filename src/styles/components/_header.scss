@@ -1,0 +1,27 @@
+.header{
+    width: 100%;
+    background-color: rgb(72, 170, 173);
+    color: whitesmoke;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    padding: 25px;
+}
+
+
+.header__title{
+    margin: 0px;
+    display: inline-block;
+}
+
+.header__side{
+    display: inline;
+}
+
+.header__links{
+    font-size: 20px;
+    padding: 3px;
+    margin-right: 25px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-decoration: none;
+}
