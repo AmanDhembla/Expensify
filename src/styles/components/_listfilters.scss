@@ -1,0 +1,24 @@
+.listfilters{
+    padding: 10px;
+}
+
+.listfilters__input{
+    width: 300px;
+    padding: 10px;
+    border: 2px solid rgba(45, 100, 102, 0.35);
+    margin-right: 50px;
+    height: 26px;
+}
+
+.listfilters__select{
+    width:100px;
+    padding: 7px;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+
+.listfilters__date{
+    display: inline-block;
+    border: 1px solid rgba(0, 158, 163, 0.3);
+}
