@@ -10,6 +10,7 @@ export default class ExpenseForm extends React.Component {
         super(props);
         this.state ={
             description: props.expense? props.expense.description : '',
+            category: props.expense? props.expense.category : '',
             note: props.expense? props.expense.note : '',
             amount: props.expense? props.expense.amount.toString() : '',
             createdAt:props.expense? moment(props.expense.createdAt) : moment(),
@@ -18,6 +19,15 @@ export default class ExpenseForm extends React.Component {
         };
     }
     
+    onCategoryChange =(e)=>{
+        const cat=e.target.value;
+        this.setState(()=>{
+            return {
+                category : cat
+            }
+        })
+    }
+
     onDescriptionChange =(e)=>{
         const desc=e.target.value;
         this.setState(()=>{
@@ -70,6 +80,7 @@ export default class ExpenseForm extends React.Component {
             })
             console.log(this.state);
             this.props.onSubmit({
+                category: this.state.category,
                 description: this.state.description,
                 amount: parseFloat(this.state.amount),
                 createdAt: this.state.createdAt.valueOf(),
@@ -84,6 +95,19 @@ export default class ExpenseForm extends React.Component {
                     {this.state.error && <p>{this.state.error}</p>}
             </div>    
             <form onSubmit={this.onSubmit}>
+
+                    <select required className="listfilters__select" 
+                        value={this.state.category} 
+                        onChange={this.onCategoryChange}
+                    >
+                        <option value="">Choose Category</option>
+                        <option value="Food">Food</option>
+                        <option value="Grocery">Grocery</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Vehicle">Vehicle</option>
+                        <option value="Miscellaneous">Miscellaneous</option>
+                    </select>
+
                     <input className="formcontainer__content" type="text" placeholder="Category/Description" 
                         autoFocus 
                         value={this.state.description} 

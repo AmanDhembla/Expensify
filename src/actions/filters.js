@@ -11,6 +11,13 @@ export const sortByAmount=()=>{
     }
 }
 
+export const setCategory=(text="")=>{
+    return {
+        type:'SET_CATEGORY',
+        text
+    }
+}
+
 export const sortByDate=()=>{
     return {
         type: 'SORT_BY_DATE'

@@ -2,6 +2,7 @@ import moment from 'moment';
 
 const filters={
     text: '',
+    category: '',
     sortBy:'Date',
     startDate: moment().startOf('month'),
     endDate: moment().endOf('month')
@@ -13,6 +14,11 @@ export default (state=filters,action)=>{
             return {
                 ...state,
                 text: action.text
+            }
+        case 'SET_CATEGORY':
+            return {
+                ...state,
+                category: action.text
             }
         case 'SORT_BY_AMOUNT':
             return {

@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {setTextFilter} from "../actions/filters";
+import {setTextFilter,setCategory} from "../actions/filters";
 import {sortByDate,sortByAmount,setStartDate,setEndDate} from "../actions/filters";
 import 'react-dates/initialize';
 import { DateRangePicker } from 'react-dates';
@@ -17,7 +17,9 @@ class ExpenseListFilters extends React.Component{
     render() {
         return (
             <div className="listfilters">
-                <input type="text" className="listfilters__input" placeholder="Search by Category/description" value={this.props.filters.text} onChange={(e)=>{
+                <input type="text" className="listfilters__input" 
+                    placeholder="Search by Category/description" 
+                    value={this.props.filters.text} onChange={(e)=>{
                     this.props.dispatch(setTextFilter(e.target.value))
                 }}/>
                 <select className="listfilters__select" value={this.props.filters.sortBy} onChange={(e)=>{
@@ -30,10 +32,26 @@ class ExpenseListFilters extends React.Component{
                     <option value="Date">Date</option>
                     <option value="Amount">Amount</option>
                 </select>
+
+                <select required className="listfilters__select" 
+                    value={this.props.filters.category} onChange={(e)=>{
+                    this.props.dispatch(setCategory(e.target.value))
+                }}
+                >
+                    <option value="">Choose Category</option>
+                    <option value="Food">Food</option>
+                    <option value="Grocery">Grocery</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Vehicle">Vehicle</option>
+                    <option value="Miscellaneous">Miscellaneous</option>
+                </select>
+
                 <div className="listfilters__date">
                     <DateRangePicker 
-                        startDate={this.props.filters.startDate} 
+                        startDate={this.props.filters.startDate}
+                        startDateId="start date" 
                         endDate={this.props.filters.endDate} 
+                        endDateId="end date"
                         onDatesChange={this.onDatesChange} 
                         focusedInput={this.state.focusedInput} 
                         onFocusChange={focusedInput => this.setState({ focusedInput })}
