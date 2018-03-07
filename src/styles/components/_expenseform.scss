@@ -28,7 +28,8 @@ div.SingleDatePickerInput.SingleDatePickerInput_1.SingleDatePickerInput__withBor
     margin: 10px 20px;
     padding: 10px;
     text-align: center;
-    
+    background-color: rgb(72, 170, 173);
+    color: white;
 }
 
 .editexpenseheading{
@@ -36,4 +37,14 @@ div.SingleDatePickerInput.SingleDatePickerInput_1.SingleDatePickerInput__withBor
     margin: auto;
     padding: 10px;
     text-align: center;
+}
+
+.expenseform__error{
+    width: 850px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    color: rgb(207, 5, 5);
+    font-size: 1.2em;
+    font-weight: 500;
 }
