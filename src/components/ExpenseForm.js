@@ -96,16 +96,16 @@ export default class ExpenseForm extends React.Component {
             </div>    
             <form onSubmit={this.onSubmit}>
 
-                    <select required className="listfilters__select" 
+                    <select required className="formcontainer__content formcontainer__drop" 
                         value={this.state.category} 
                         onChange={this.onCategoryChange}
                     >
-                        <option value="">Choose Category</option>
-                        <option value="Food">Food</option>
-                        <option value="Grocery">Grocery</option>
-                        <option value="Entertainment">Entertainment</option>
-                        <option value="Vehicle">Vehicle</option>
-                        <option value="Miscellaneous">Miscellaneous</option>
+                        <option className="formcontainer__option" value="">Choose Category</option>
+                        <option className="formcontainer__option" value="Food">Food</option>
+                        <option className="formcontainer__option" value="Grocery">Grocery</option>
+                        <option className="formcontainer__option" value="Entertainment">Entertainment</option>
+                        <option className="formcontainer__option" value="Vehicle">Vehicle</option>
+                        <option className="formcontainer__option" value="Miscellaneous">Miscellaneous</option>
                     </select>
 
                     <input className="formcontainer__content" type="text" placeholder="Category/Description" 
