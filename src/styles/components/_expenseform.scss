@@ -48,3 +48,32 @@ div.SingleDatePickerInput.SingleDatePickerInput_1.SingleDatePickerInput__withBor
     font-size: 1.2em;
     font-weight: 500;
 }
+
+@media (min-width:768px) and (max-width:1024px){
+    .formcontainer{
+        width: 700px;
+        box-sizing: border-box;
+    }
+    .formcontainer__content{
+        box-sizing: border-box;
+        margin: 10px auto;
+    }
+    #date{
+        width: 700px;
+        box-sizing: border-box;
+        margin: 10px auto;
+    }
+    .editexpenseheading{
+        width: 700px;
+        margin: 10px auto;
+        text-align: center;
+    }
+    .expenseform__button{
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+    .expenseform__error{
+        width: 700px;
+        margin: 10px auto;
+    }
+}
