@@ -5,17 +5,25 @@
     margin-top: 0px;
     margin-bottom: 50px;
     padding: 25px;
+    box-sizing: border-box;
 }
 
+.header__content{
+    width: 850px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
 
 .header__title{
+    text-decoration: none;
     margin: 0px;
     display: inline-block;
-    width: 900px;
+    color: white;
 }
 
 .header__side{
-    display: inline;
+    margin-top: 8px;
 }
 
 .header__links{
@@ -26,4 +34,5 @@
     border-radius: 10px;
     text-decoration: none;
     color: white;
+    margin-top: 30px;
 }
