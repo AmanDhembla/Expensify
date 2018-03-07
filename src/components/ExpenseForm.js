@@ -108,7 +108,7 @@ export default class ExpenseForm extends React.Component {
                         <option className="formcontainer__option" value="Miscellaneous">Miscellaneous</option>
                     </select>
 
-                    <input className="formcontainer__content" type="text" placeholder="Category/Description" 
+                    <input className="formcontainer__content" type="text" placeholder="Description" 
                         autoFocus 
                         value={this.state.description} 
                         onChange={this.onDescriptionChange}

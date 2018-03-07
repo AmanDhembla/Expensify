@@ -28,6 +28,10 @@
     color:black;
 }
 
+.listitem:hover{
+    border: 2px solid rgb(56, 125, 128);
+}
+
 @media (min-width:768px) and (max-width:1024px){
     .expenseList{
         box-sizing: border-box;

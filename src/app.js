@@ -14,27 +14,27 @@ const store =configureStore();
 store.subscribe(()=>{
     const state=store.getState();
     console.log(state);
-    // const expenses=state.expenses;
-    // const filters=state.filters;
-    // console.log(getVisibleExpenses(expenses,filters));
 });
 
 store.dispatch(add_Expense({
-    description: "khana",
-    amount: 400,
-    createdAt: 2000
+    description: "kurkure",
+    amount: 20,
+    category: "Food",
+    createdAt: 1485435555555
 }));
 
 store.dispatch(add_Expense({
-    description: "peena",
-    amount: 100,
-    createdAt:1000
+    description: "coca-cola",
+    amount: 35,
+    category: "Entertainment",
+    createdAt:1487555555555
 }));
 
 store.dispatch(add_Expense({
-    description: "grocery",
-    amount: 250,
-    createdAt: 100
+    description: "onions",
+    amount: 50,
+    category:"Grocery",
+    createdAt: 1486555555555
 }));
 
 const jsx =(

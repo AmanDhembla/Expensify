@@ -7,7 +7,7 @@ const  ExpenseList = (props) =>(
     <div className="expenseList">
         <h1 className="expenseListHeading">Expense List</h1>
         <div className="expenseListHeader">
-            <p>Category/Description</p>
+            <p>Description (Category)</p>
             <p>Amount</p>
         </div>
         {props.expenses.map((expense)=>{
