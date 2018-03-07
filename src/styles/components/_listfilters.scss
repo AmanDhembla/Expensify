@@ -14,7 +14,7 @@
 .listfilters__select{
     width:100px;
     padding: 7px;
-    font-size: 15px;
+    font-size: 14px;
     margin-top: 10px;
     margin-right: 50px;
 }
@@ -22,4 +22,16 @@
 .listfilters__date{
     display: inline-block;
     border: 1px solid rgba(0, 158, 163, 0.3);
+}
+
+@media (min-width:768px) and (max-width:900px){
+    .listfilters__input{
+        margin-right: 25px;
+        width: 200px;
+        font-size: 14px;
+    }
+
+    .listfilters__select{
+        margin-right: 25px; 
+    }
 }

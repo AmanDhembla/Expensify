@@ -28,3 +28,9 @@
     color:black;
 }
 
+@media (min-width:768px) and (max-width:900px){
+    .expenseList{
+        box-sizing: border-box;
+        width: 700px;
+    }
+}
