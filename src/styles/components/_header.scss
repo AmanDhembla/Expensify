@@ -43,3 +43,14 @@
         width: 100%;
     } 
 }
+
+@media (min-width:360px) and (max-width:768px){
+    .header__content{
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+    } 
+    .header__title{
+        margin-bottom: 10px;
+    }
+}

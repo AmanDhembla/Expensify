@@ -34,3 +34,10 @@
         width: 700px;
     }
 }
+
+@media (min-width:360px) and (max-width:768px){
+    .expenseList{
+        box-sizing: border-box;
+        width: 340px;
+    }
+}

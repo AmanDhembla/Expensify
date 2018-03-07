@@ -35,3 +35,17 @@
         margin-right: 25px; 
     }
 }
+
+@media (min-width:360px) and (max-width:768px){
+    .listfilters__input{
+        display: block;
+        margin: auto;
+        width: 292px;
+        font-size: 20px;
+    }
+
+    .listfilters__select{
+        margin: 20px auto; 
+        display: block;
+    }
+}

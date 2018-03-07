@@ -77,3 +77,34 @@ div.SingleDatePickerInput.SingleDatePickerInput_1.SingleDatePickerInput__withBor
         margin: 10px auto;
     }
 }
+
+
+@media (min-width:360px) and (max-width:768px){
+    .formcontainer{
+        width: 300px;
+        box-sizing: border-box;
+    }
+    .formcontainer__content{
+        box-sizing: border-box;
+        margin: 10px auto;
+    }
+    #date{
+        width: 300px;
+        box-sizing: border-box;
+        margin: 10px auto;
+    }
+    .editexpenseheading{
+        width: 300px;
+        margin: 10px auto;
+        text-align: center;
+    }
+    .expenseform__button{
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+    .expenseform__error{
+        width: 300px;
+        box-sizing: border-box;
+        margin: 10px auto;
+    }
+}
